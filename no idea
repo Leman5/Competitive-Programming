@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,m = map(int,input().split())
+arr = [int(x) for x in input().split()]
+a = set([int(x) for x in input().split()])
+b = set([int(x) for x in input().split()])
+h = 0
+for i in arr:
+    if(i in a):
+        h +=1
+    elif(i in b):
+        h-=1
+print(h)            
