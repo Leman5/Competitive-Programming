@@ -1,0 +1,26 @@
+def minimumDistances(a,n):
+    out = []
+    rev = a[::-1]
+    for i in range(n):
+        dif = n-1- rev.index(a[i])
+        
+        if(dif - i != 0):
+            out.append(abs(dif - i))
+            
+    if(len(out) !=0):
+        return min(out) 
+    else:
+         return -1
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    a = list(map(int, input().rstrip().split()))
+
+    result = minimumDistances(a,n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
