@@ -6,13 +6,12 @@
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        d = dict()
+        d = set()
         while(headA):
-            d[headA] = 'Visited'
+            d.add(headA)
             headA = headA.next
-        # print(d)
         while(headB):
-            if(headB in d.keys()):
+            if(headB in d):
                 return headB
             headB = headB.next
         return None
