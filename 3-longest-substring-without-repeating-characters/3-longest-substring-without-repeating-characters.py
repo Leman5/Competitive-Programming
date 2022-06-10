@@ -11,15 +11,10 @@ class Solution:
         start = 0
         end = 1
         while(start<len(s) and end<len(s)):
-            # print(start,end,out)
-            if(s[end] in visited):
-                if(visited[s[end]]>=start and visited[s[end]]<end):
-                    start = visited[s[end]]+1
-                else:
-                    out = max(out,end-start+1)
-                visited[s[end]] = end
+            if(s[end] in visited and (visited[s[end]]>=start and visited[s[end]]<end)):
+                    start = visited[s[end]]+1                  
             else:
                 out = max(out,end-start+1)
-                visited[s[end]] = end
+            visited[s[end]] = end
             end += 1
         return out
