@@ -31,3 +31,5 @@ class Solution:
         dfs(endWord, [])
         return res
         
+        
+        [str(x) for x in input().split()]
