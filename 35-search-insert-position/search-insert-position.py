@@ -11,11 +11,6 @@ class Solution:
             else:
                 high = mid - 1
         
-        mid = (high+low)//2
-        # print(mid)
+        # mid = (high+low)//2
 
-        # if(target>nums[mid]):
-        return mid+1
-        # else:
-        #     return mid
-        
+        return low
