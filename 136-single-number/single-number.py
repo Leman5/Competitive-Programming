@@ -15,12 +15,12 @@ class Solution:
         d = dict()
         for num in nums:
             if num in d.keys():
-                d[num] = True
+                del d[num]
             else:
                 d[num] = False
         for key,value in d.items():
-            if value == False:
-                return key
+            # if value == False:
+            return key
         
 
 
